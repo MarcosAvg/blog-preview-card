@@ -1,0 +1,157 @@
+:root {
+  /*----- Custom properties -----*/
+
+  /* Colors */
+  --yellow: rgba(244, 208, 78, 1);
+  --gray-950: rgba(17, 16, 17, 1);
+  --gray-500: rgba(107, 107, 107, 1);
+  --white: rgba(255, 255, 255, 1);
+
+  /* Fonts */
+  @font-face {
+    font-family: "Figtree";
+    src: url(assets/fonts/Figtree-VariableFont_wght.ttf) format("ttf"),
+      url(assets/fonts/Figtree-Italic-VariableFont_wght.ttf) format("ttf");
+  }
+  --primary-font: "Figtree", sans-serif;
+}
+
+/* ----- Reset ----- */
+html {
+  box-sizing: border-box;
+  font-family: "Figtree", sans-serif;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  overflow-wrap: break-word;
+}
+
+body {
+  background-color: var(--yellow);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*----- Components -----*/
+
+.main {
+  padding: 0 0.5rem;
+}
+
+/* Card */
+.card {
+  margin: 15vh auto;
+  background-color: var(--white);
+  border: 1px solid var(--gray-950);
+  border-radius: 1rem;
+  box-shadow: 0.25rem 0.25rem var(--gray-950);
+  max-width: 24rem;
+}
+
+.card__body {
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.card__ilustration {
+  border-radius: 0.5rem;
+}
+
+.card__content {
+  gap: 0.75rem;
+}
+
+.card__category {
+  background-color: var(--yellow);
+  max-width: 30%;
+  padding: 0.5rem 0.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+}
+
+.card__description {
+  color: var(--gray-500);
+}
+
+.card__author {
+  align-self: flex-start;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 50%;
+}
+
+.card__avatar {
+  flex: 1;
+}
+
+.card__author-name {
+  font-size: 1rem;
+  flex: 3;
+}
+
+/*----- Utilities -----*/
+
+/* Flexbox */
+.d-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/* Text presets */
+.tp-1,
+.tp-2,
+.tp-3,
+.tp-4 {
+  line-height: 1.5;
+  letter-spacing: 0px;
+}
+
+.tp-1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.tp-2 {
+  font-weight: 800;
+}
+.tp-3 {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.tp-3-b {
+  font-size: 0.875rem;
+  font-weight: 900;
+}
+
+/**** Site styles ****/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: rgba(62, 82, 163, 1);
+}
