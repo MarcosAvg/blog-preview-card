@@ -91,6 +91,10 @@ img {
   border-radius: 0.25rem;
 }
 
+.card__title:hover {
+  color: var(--yellow);
+}
+
 .card__description {
   color: var(--gray-500);
 }
