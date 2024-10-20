@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Figtree";
+  src: url(assets/fonts/Figtree-VariableFont_wght.ttf) format("truetype");
+}
+
 :root {
   /*----- Custom properties -----*/
 
@@ -8,18 +13,13 @@
   --white: rgba(255, 255, 255, 1);
 
   /* Fonts */
-  @font-face {
-    font-family: "Figtree";
-    src: url(assets/fonts/Figtree-VariableFont_wght.ttf) format("ttf"),
-      url(assets/fonts/Figtree-Italic-VariableFont_wght.ttf) format("ttf");
-  }
   --primary-font: "Figtree", sans-serif;
 }
 
 /* ----- Reset ----- */
 html {
   box-sizing: border-box;
-  font-family: "Figtree", sans-serif;
+  font-family: var(--primary-font);
   font-size: 16px;
 }
 
@@ -31,14 +31,8 @@ html {
 
 body,
 h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 p,
-ol,
-ul {
+figure {
   margin: 0;
   padding: 0;
   font-weight: normal;
@@ -66,8 +60,18 @@ img {
   background-color: var(--white);
   border: 1px solid var(--gray-950);
   border-radius: 1rem;
-  box-shadow: 0.25rem 0.25rem var(--gray-950);
+  box-shadow: 0.5rem 0.5rem var(--gray-950);
   max-width: 24rem;
+  transition: box-shadow 300ms;
+}
+
+.card:hover {
+  box-shadow: 1rem 1rem var(--gray-950);
+  cursor: pointer;
+}
+
+.card:hover .card__title {
+  color: var(--yellow);
 }
 
 .card__body {
@@ -75,24 +79,30 @@ img {
   padding: 1.5rem;
 }
 
+.card__img {
+  padding-bottom: 1.5rem;
+}
+
 .card__ilustration {
   border-radius: 0.5rem;
 }
 
 .card__content {
-  gap: 0.75rem;
+  padding-bottom: 1.5rem;
 }
 
 .card__category {
   background-color: var(--yellow);
   max-width: 30%;
   padding: 0.5rem 0.5rem;
+  margin-bottom: 0.75rem;
   text-align: center;
   border-radius: 0.25rem;
 }
 
-.card__title:hover {
-  color: var(--yellow);
+.card__title {
+  padding: 0.75rem 0;
+  transition: color 300ms;
 }
 
 .card__description {
@@ -119,36 +129,29 @@ img {
 
 /*----- Utilities -----*/
 
-/* Flexbox */
-.d-flex {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
 /* Text presets */
 .tp-1,
 .tp-2,
 .tp-3,
 .tp-4 {
   line-height: 1.5;
-  letter-spacing: 0px;
+  letter-spacing: 0;
 }
 
 .tp-1 {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 800;
 }
 .tp-2 {
-  font-weight: 800;
+  font-weight: 500;
 }
 .tp-3 {
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 .tp-3-b {
   font-size: 0.875rem;
-  font-weight: 900;
+  font-weight: 800;
 }
 
 /**** Site styles ****/
